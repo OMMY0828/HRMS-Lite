@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.6;
+}
+
+.app-root {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Remove old sidebar styles since we're using inline styles */
+.sidebar {
+  /* Styles moved to component */
+}
+
+.container {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Form styles */
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.employee-form input,
+.employee-form select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.employee-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.employee-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Table styles */
+.emp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.emp-table th,
+.emp-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.emp-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+}
+
+.emp-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Button styles */
+button {
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-root {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+  }
+  
+  .container {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  
+  .employee-form {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .emp-table {
+    font-size: 12px;
+  }
+  
+  .emp-table th,
+  .emp-table td {
+    padding: 8px;
+  }
+}
