@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import EmployeeForm from './EmployeeForm'
 
-const API = import.meta.env.VITE_API_BASE || 'http://localhost:8000/api'
+const API = import.meta.env.VITE_API_BASE || 'https://hrms-lite-backend-2fvs.onrender.com/api'
 
 export default function EmployeeList({onViewAttendance}){
   const [employees, setEmployees] = useState([])

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-const API = import.meta.env.VITE_API_BASE || 'http://localhost:8000/api'
+const API = import.meta.env.VITE_API_BASE || 'https://hrms-lite-backend-2fvs.onrender.com/api'
 
 export default function EmployeeForm({onAdd}){
   const [employeeId, setEmployeeId] = useState('')

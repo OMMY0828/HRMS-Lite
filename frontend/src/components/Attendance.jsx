@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 
-const API = import.meta.env.VITE_API_BASE || 'http://localhost:8000/api'
+const API = import.meta.env.VITE_API_BASE || 'https://hrms-lite-backend-2fvs.onrender.com/api'
 
 export default function Attendance({employeeIdProp}){
   const [employees, setEmployees] = useState([])
